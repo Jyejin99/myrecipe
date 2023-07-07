@@ -1,0 +1,83 @@
+<!doctype html>
+   <html>
+   <head>
+      <title>2022-2학기 웹제작 </title>
+      <script>
+        function myInfo(){
+            var txt1 = document.getElementById("textInput1").value;
+            var txt2 = document.getElementById("textInput2").value;
+
+            document.getElementById("result1").innerText = txt1;
+            document.getElementById("result2").innerText = txt2;
+        }
+
+        function videobtn(){
+            document.getElementById("video-con").play();
+        }
+
+      </script>
+      <style>
+        .title{
+            font-size: 18px;
+            font-weight: 800;
+            margin: 1% 0 1% 0;
+        }
+        .red{
+            color:red;
+        }
+        .back_white{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+        }
+        .video{
+            width: 50%;
+        }
+        .login{
+            width: 50%;
+            padding-top: 18px;
+        }
+        .login label{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        .login input{
+            border : none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .content{
+            float: right;
+            margin-top: 1%;
+            justify-content: flex;
+        }
+
+      </style>
+   </head>
+   <body style="background-color:skyblue; color:black">
+   <body>
+    <div class="title">
+        <span>알기쉬운 웹제작 :</span> <span class="red">기말고사 대체 과제</span>
+    </div>
+   <div class="back_white">
+        <div class="login">
+            <div class="login-con"><label>학번 : </label><span id="result1"></span></div>
+            <div class="login-con"><label>이름 : </label><span id="result2"></span></div>
+        </div>
+        <div class="video">
+            <video id="video-con" src="haha.mp4" width="320" height="240" controls></video>
+        </div>
+   </div>
+    <div class="content">
+        <form action="javascript:myInfo()">
+            <input type="text" placeholder="학번" id="textInput1">
+            <input type="text" placeholder="이름" id="textInput2">
+            <input type="submit" value="입력">
+            <input type="button" value="재생" onclick="videobtn();">
+        </form>
+    </div>
+    <hr>
+
+</html>
